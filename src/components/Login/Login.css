@@ -1,0 +1,112 @@
+/* Container styles */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000;
+  }
+  
+  /* Form styles */
+  .form {
+    display: flex;
+    flex-direction: column;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fff;
+  }
+  
+  /* Logo styles */
+  .logo {
+    width: 50px;
+    height: 50px;
+    align-self: center;
+  }
+  
+  /* Title styles */
+  .title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* Subtitle styles */
+  .subtitle {
+    margin-bottom: 20px;
+  }
+  
+  /* Input styles */
+  .input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  /* Checkbox wrapper styles */
+  .checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Checkbox styles */
+  .checkbox {
+    margin-right: 10px;
+  }
+  
+  /* Label styles */
+  .label {
+    font-size: 14px;
+  }
+  
+  /* Button styles */
+  .button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6f61;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  /* AltSignIn styles */
+  .alt-signin {
+    margin-bottom: 10px;
+  }
+  
+  /* Social buttons wrapper styles */
+  .social-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Google button styles */
+  .google-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #db4437;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* Facebook button styles */
+  .facebook-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3b5998;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* Image styles */
+  .image {
+    width: 50%;
+    border-radius: 10px;
+    margin-left: 20px;
+  }
+  
