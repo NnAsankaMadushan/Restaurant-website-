@@ -1,21 +1,31 @@
 /* Container styles */
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #000;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #050002;
+  background-image: url("/src/components/Images/background.jpg");
+  background-size: cover;  /* Ensures the image covers the entire container */
+  background-position: center;  /* Centers the image */
+  background-repeat: no-repeat;  /* Prevents the image from repeating */
+  backdrop-filter: blur(200000px);
+  margin: 0;
+  padding: 0;
+}
+
   
   /* Form styles */
   .form {
     display: flex;
     flex-direction: column;
-    background-color: #222;
+    /* background-color: #6b2525; */
+    backdrop-filter: blur(20px);
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    color: #fff;
+    color: #000000;
+    border: ;
   }
   
   /* Logo styles */
@@ -125,9 +135,14 @@
   }
   
   .custom-social-icon {
-    width: 3px; 
-    height: 3px; 
+    width: 12px;
+    height: 12px;
+    border: 2px solid white; 
+    border-radius: 50%;  
+    /* padding: 2px;  */
+    margin-right: 10px;
   }
+  
 
   @media (max-width: 400px) {
     .social-buttons {
