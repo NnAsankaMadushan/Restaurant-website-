@@ -1,11 +1,11 @@
 import React from 'react';
 import './Login.css';
-
+import profileImage from '../Images/profile1.png';
 const Login = () => {
   return (
     <div className="container">
       <div className="form">
-        <img src="../Images/profile.png" alt="Grand Restaurant Logo" className="logo" />
+        <img src={profileImage} alt="Grand Restaurant Logo" className="logo" />
         <h1 className="title">Welcome Back</h1>
         <p className="subtitle">Enter your details to access to your account</p>
         <input type="email" className="input" placeholder="Enter your email address" />
