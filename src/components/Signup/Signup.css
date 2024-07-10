@@ -3,155 +3,185 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 100vh; 
   background-color: #050002;
   background-image: url("/src/components/Images/background.jpg");
-  background-size: cover;  /* Ensures the image covers the entire container */
-  background-position: center;  /* Centers the image */
-  background-repeat: no-repeat;  /* Prevents the image from repeating */
-  backdrop-filter: blur(200000px);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   margin: 0;
   padding: 0;
 }
 
-  
-  /* Form styles */
-  .form {
-    display: flex;
-    flex-direction: column;
-    /* background-color: #6b2525; */
-    backdrop-filter: blur(20px);
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    color: #000000;
-    border: ;
-  }
-  
-  /* Logo styles */
-  .logo {
-    width: 150px;
-    height: 150px;
-    align-self: center;
-  }
-  
-  /* Title styles */
-  .title {
-    font-size: 24px;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-  }
-  
-  /* Subtitle styles */
-  .subtitle {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  /* Input styles */
-  .input {
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: none;
-  }
-  
-  /* Checkbox wrapper styles */
-  .checkbox-wrapper {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  /* Checkbox styles */
-  .checkbox {
-    margin-right: 10px;
-  }
-  
-  /* Label styles */
-  .label {
-    font-size: 14px;
-  }
-  
-  /* Button styles */
-  .button {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #ff6f61;
-    color: #fff;
-    cursor: pointer;
-    margin-bottom: 20px;
-  }
-  
-  /* AltSignIn styles */
-  .alt-signin {
-    margin-bottom: 10px;
-  }
-  
-  /* Social buttons wrapper styles */
+.form-container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  perspective: 1000px;
+}
+
+/* Form styles */
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.6); 
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  backface-visibility: hidden;
+  transition: transform 0.8s;
+  position: absolute; 
+}
+
+.signup-form {
+  transform: rotateY(0);
+}
+
+.signin-form {
+  transform: rotateY(180deg);
+}
+
+.flipped .signup-form {
+  transform: rotateY(180deg);
+}
+
+.flipped .signin-form {
+  transform: rotateY(0);
+}
+
+/* Logo styles */
+.logo {
+  width: 150px;
+  height: 150px;
+  align-self: center;
+}
+
+/* Title styles */
+.title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+/* Subtitle styles */
+.subtitle {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Input styles */
+.input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+/* Checkbox wrapper styles */
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Checkbox styles */
+.checkbox {
+  margin-right: 10px;
+}
+
+/* Label styles */
+.label {
+  font-size: 14px;
+}
+
+/* Button styles */
+.button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff6f61;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.flip-button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0bb460;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* AltSignIn styles */
+.alt-signin {
+  margin-bottom: 10px;
+}
+
+/* Social buttons wrapper styles */
+.social-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Google button styles */
+.google-button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #db4437;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Facebook button styles */
+.facebook-button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3b5998;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Image styles */
+.image {
+  width: 50%;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+
+.text-signin {
+  display: flex;
+  justify-content: center;
+}
+
+.custom-social-icon {
+  width: 12px;
+  height: 12px;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+@media (max-width: 400px) {
   .social-buttons {
-    display: flex;
-    /* flex-direction: row; */
-    justify-content: space-between;
-    align-items: center;
-    gap: 5px;
+    flex-direction: column;
   }
-  
-  /* Google button styles */
-  .google-button {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #db4437;
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  /* Facebook button styles */
+
+  .google-button,
   .facebook-button {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #3b5998;
-    color: #fff;
-    cursor: pointer;
-    
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
   }
-  
-  /* Image styles */
-  .image {
-    width: 50%;
-    border-radius: 10px;
-    margin-left: 20px;
-  }
-
-  .text-signin{
-    display: flex;
-    justify-content:center ;
-  }
-  
-  .custom-social-icon {
-    width: 12px;
-    height: 12px;
-    border: 2px solid white; 
-    border-radius: 50%;  
-    /* padding: 2px;  */
-    margin-right: 10px;
-  }
-  
-
-  @media (max-width: 400px) {
-    .social-buttons {
-      flex-direction: column;
-    }
-  
-    .google-button, .facebook-button {
-      width: 100%;
-      justify-content: center;
-      margin-bottom: 10px;
-    }
-  }
+}
