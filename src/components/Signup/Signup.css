@@ -29,11 +29,16 @@
   .title {
     font-size: 24px;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
   }
   
   /* Subtitle styles */
   .subtitle {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
   }
   
   /* Input styles */
@@ -80,7 +85,10 @@
   /* Social buttons wrapper styles */
   .social-buttons {
     display: flex;
+    /* flex-direction: row; */
     justify-content: space-between;
+    align-items: center;
+    gap: 5px;
   }
   
   /* Google button styles */
@@ -101,6 +109,7 @@
     background-color: #3b5998;
     color: #fff;
     cursor: pointer;
+    
   }
   
   /* Image styles */
@@ -109,4 +118,25 @@
     border-radius: 10px;
     margin-left: 20px;
   }
+
+  .text-signin{
+    display: flex;
+    justify-content:center ;
+  }
   
+  .custom-social-icon {
+    width: 3px; 
+    height: 3px; 
+  }
+
+  @media (max-width: 400px) {
+    .social-buttons {
+      flex-direction: column;
+    }
+  
+    .google-button, .facebook-button {
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+  }
