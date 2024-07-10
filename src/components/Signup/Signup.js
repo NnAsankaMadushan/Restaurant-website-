@@ -10,6 +10,7 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [isFlipped, setIsFlipped] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,6 +30,10 @@ const Login = () => {
     // Handle sign in logic here
   };
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <>
       <nav className="navbar">
@@ -36,7 +41,10 @@ const Login = () => {
           <img src={brandIcon} alt="Brand Icon" />
           <span>Burgers</span>
         </div>
-        <div className="navbar-info">
+        <button className="toggle-button" onClick={toggleMenu}>
+          ☰
+        </button>
+        <div className={`navbar-info ${menuOpen ? 'show' : ''}`}>
           <div>Email: info@brand.com</div>
           <div>Phone: (123) 456-7890</div>
           <div className='signinup'>
