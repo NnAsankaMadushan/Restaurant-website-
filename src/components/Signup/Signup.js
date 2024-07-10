@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Signup.css';
 import profileImage from '../Images/profile1.png';
-import brandIcon from '../Images/profile1.png'; // Replace with your brand icon
+import brandIcon from '../Images/profile1.png';
 import { SocialIcon } from 'react-social-icons';
 import axios from 'axios';
 
