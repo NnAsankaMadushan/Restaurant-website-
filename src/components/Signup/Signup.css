@@ -78,6 +78,13 @@
 
 /* Media query for smaller screens */
 @media (max-width: 800px) {
+  .navbar-info a {
+    margin-left: 0px;
+  }
+  .signinup {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
   .toggle-button{
     background-color: #d3512a;
     color: #d3512a;
