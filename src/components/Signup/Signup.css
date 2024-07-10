@@ -1,5 +1,5 @@
 /* Container styles */
-.container {
+.logincontainer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,6 +12,59 @@
   margin: 0;
   padding: 0;
 }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+  /* background-color: #333; */
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.navbar-brand img {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+
+.navbar-brand span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-info {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+.navbar-info div {
+  margin-left: 20px;
+}
+
+.navbar-info a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.signinup{
+  padding-right: 40px;
+}
+
 
 .form-container {
   position: relative;
