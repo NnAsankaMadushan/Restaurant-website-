@@ -9,6 +9,7 @@ import food6 from '../Images/foods/food-6.png';
 import './Home.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWordpressSimple, FaGlobe, FaFacebook } from 'react-icons/fa';
+import { FaCartShopping } from 'react-icons/fa6';
 
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -46,6 +47,7 @@ const Home = () => {
           <div>Orders</div>
           <div>Contact</div>
           <div>About</div>
+          <div className='cart'><FaCartShopping /></div>
         </div>
       </nav>
       <div className='homeContainer'>
@@ -80,34 +82,159 @@ const Home = () => {
         </section>
       </div>
       <div className='orderContainer'>
-      <h1>Order</h1>
-        <section className='about'>
-          <div className='about-description'>
-            <img src={brandIcon} alt="Brand Icon" />
-            <div>
-              <p>Welcome to <span>Burgers</span>, where flavor meets quality! Since our founding in 2010, we have been committed to crafting the most delicious and satisfying burgers in town. Our journey began with a simple yet powerful idea: to create a place where people could enjoy high-quality, gourmet burgers made from the freshest ingredients.</p>
+      <h1>Orders</h1>
+        <section className='orders'>
+          <div className='orders-content'>
+            <div className='order-kind'>Burgers</div>
+            <div className='order-kind'>Desserts</div>
+            <div className='order-kind'>Drinks</div>
+            <div className='order-kind'>Pasta</div>
+            <div className='order-kind'>Pizzas</div>
+            <div className='order-kind'>Salads</div>
+          </div>
+          <div className='burger-content'>
+            <div className='burger-content-row'>
+              <div className='food-item'>
+                <img className='food-photo' src={food1} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+              <div className='food-item'>
+                <img className='food-photo' src={food2} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+              <div className='food-item'>
+                <img className='food-photo' src={food3} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+              <div className='food-item'>
+                <img className='food-photo' src={food4} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-              <p>At Burgers, we believe in doing things differently. Every burger we serve is made to order, using 100% grass-fed beef, locally sourced produce, and freshly baked buns. Our dedication to quality extends to our kitchen, where our team of skilled chefs prepare each meal with passion and precision.</p>
+            <div className='burger-content-row'>
+              <div className='food-item'>
+                <img className='food-photo' src={food1} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+              <div className='food-item'>
+                <img className='food-photo' src={food2} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+              <div className='food-item'>
+                <img className='food-photo' src={food3} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+              <div className='food-item'>
+                <img className='food-photo' src={food4} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-              <p>Thank you for choosing Burgers. Whether you’re dining in, taking out, or ordering delivery, we are committed to providing you with an unforgettable dining experience. Join us today and discover why we’re not just serving food, but creating memories.</p>
-
-              <p>Burgers - Taste the Difference.</p>
+            <div className='burger-content-row'>
+              <div className='food-item'>
+                <img className='food-photo' src={food1} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+              <div className='food-item'>
+                <img className='food-photo' src={food2} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+              <div className='food-item'>
+                <img className='food-photo' src={food3} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+              <div className='food-item'>
+                <img className='food-photo' src={food4} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div className='food-imgs' ref={foodImgsRef}>
-            <img src={food1} alt="food" />
-            <img src={food2} alt="food" />
-            <img src={food3} alt="food" />
-            <img src={food4} alt="food" />
-            <img src={food5} alt="food" />
-            <img src={food6} alt="food" />
-            <img src={food1} alt="food" />
-            <img src={food2} alt="food" />
-            <img src={food3} alt="food" />
-            <img src={food4} alt="food" />
-            <img src={food5} alt="food" />
-            <img src={food6} alt="food" />
-          </div>
+          
         </section>
       </div>
       <div className='contactContainer'>
@@ -135,10 +262,10 @@ const Home = () => {
       </div>
         </section>
         <div className="contact-map">
-          <p>Oops! Something went wrong.</p>
-          <p>This page didn't load Google Maps correctly. See the JavaScript console for technical details.</p>
+        {/* <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdEyxENGQgPhnycD8qtAs0S-Wy6ge0ZiI&callback=initMap">
+        </script> */}
         </div>
-        <div className='contactImage'><img src={food1} alt="food" /></div>
+        {/* <div className='contactImage'><img src={food1} alt="food" /></div> */}
       </div>
     </div>
   );
