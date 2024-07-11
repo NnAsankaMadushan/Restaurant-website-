@@ -57,6 +57,11 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin-top: 150px;
 }
+.orderContainer {
+  padding: 0px 10%;
+  backdrop-filter: blur(40px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
 .contactContainer {
   padding: 0px 10%;
@@ -65,7 +70,8 @@
 }
 
 .homeContainer h1,
-.contactContainer h1 {
+.contactContainer h1, 
+.orderContainer h1 {
   padding-top: 2%;
   font-size: 45px;
   margin-bottom: 0;
