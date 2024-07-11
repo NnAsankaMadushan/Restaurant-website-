@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import brandIcon from '../Images/profile1.png';
+import food1 from '../Images/foods/food-1.png';
+import food2 from '../Images/foods/food-2.png';
+import food3 from '../Images/foods/food-3.png';
+import food4 from '../Images/foods/food-4.png';
+import food5 from '../Images/foods/food-5.png';
+import food6 from '../Images/foods/food-6.png';
 import "./Home.css";
 
 const Home = () => {
@@ -39,7 +45,6 @@ const Home = () => {
         </div>
       </nav>
       <div className='homeContainer'>
-        <h1>About Us</h1>
         <section className='about'>
           <div className='about-description'>
             <img src={brandIcon} alt="Brand Icon" />
@@ -52,13 +57,12 @@ const Home = () => {
             </div>
           </div>
           <div className='food-imgs'>
-            <img src={brandIcon} alt="Brand Icon" />
-            <img src={brandIcon} alt="Brand Icon" />
-            <img src={brandIcon} alt="Brand Icon" />
-            <img src={brandIcon} alt="Brand Icon" />
-            <img src={brandIcon} alt="Brand Icon" />
-            <img src={brandIcon} alt="Brand Icon" />
-      
+            <img src={food1} alt="food" />
+            <img src={food2} alt="food" />
+            <img src={food3} alt="food" />
+            <img src={food4} alt="food" />
+            <img src={food5} alt="food" />
+            <img src={food6} alt="food" />
           </div>
         </section>
       </div>
