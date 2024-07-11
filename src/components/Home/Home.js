@@ -8,6 +8,7 @@ import food5 from '../Images/foods/food-5.png';
 import food6 from '../Images/foods/food-6.png';
 import './Home.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWordpressSimple, FaGlobe, FaFacebook } from 'react-icons/fa';
 
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -110,18 +111,34 @@ const Home = () => {
         </section>
       </div>
       <div className='contactContainer'>
-        <h1>Contact</h1>
+        <h1>Contact Us</h1>
         <section className='contact'>
-          <div className='contact-block'>
-            <div className='contactInfo'>
-              <p><i className="fas fa-phone"></i> <span className="label">Telephone Number</span> <span>: 011 2 345 458</span></p>
-              <p><i className="fas fa-envelope"></i> <span className="label">Email</span> <span>: burgers@gmail.com</span></p>
-              <p><i className="fas fa-globe"></i> <span className="label">Website</span> <span>: www.burgers.com</span></p>
-              <p><i className="fab fa-facebook"></i> <span className="label">Facebook</span> <span>: www.facebook.com/burgers</span></p>
-            </div>
-            <img src={food1} alt="food" />
-          </div>
+        <div className="contact-body">
+        <div className="contact-form">
+          <h3>Contact Us</h3>
+          <form>
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <input type="text" name="subject" placeholder="Subject" required />
+            <textarea name="message" placeholder="Message" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+        <div className="contact-info">
+          <h3>Contact Information</h3>
+          <p><FaMapMarkerAlt /> 198 West 21th Street, Suite 721 New York NY 10016</p>
+          <p><FaPhone /> 011 2 345 458</p>
+          <p><FaFacebook /> www.facebook.com</p>
+          <p><FaEnvelope /> burgers@gmail.com</p>
+          <p><FaGlobe /><a href="http://yoursite.com">www.burgers.com</a></p>
+        </div>
+      </div>
         </section>
+        <div className="contact-map">
+          <p>Oops! Something went wrong.</p>
+          <p>This page didn't load Google Maps correctly. See the JavaScript console for technical details.</p>
+        </div>
+        <div className='contactImage'><img src={food1} alt="food" /></div>
       </div>
     </div>
   );
