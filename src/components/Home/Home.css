@@ -1,11 +1,12 @@
 .container {
   padding: 20px 20px;
   background-image: url("/src/components/Images/background.jpg");
-  height: 100vh;
+  height: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  color: #ffffff;
 }
 
 .navbar {
@@ -55,13 +56,13 @@
   backdrop-filter: blur(20px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin-top: 150px;
-  display: flex;
-  justify-content:center ;
-  align-items: center;
-  flex-direction: row;
+}
+.homeContainer h1 {
+  padding-top: 2%;
+  font-size: 45px
 }
 
-.about {
+.about-description {
   display: flex;
   align-items: center;
   justify-content:space-between;
@@ -72,16 +73,35 @@
   padding-bottom: 2%;
 }
 
-.about img {
+.about-description img {
   width: 30%;
   height: 20%;
   margin-right: 20px;
   border-radius: 10px;
 }
 
-.about p {
+.about-description p {
   font-size: 22px;
   color: #ffffff;
+}
+
+.food-imgs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  /* overflow: hidden; */
+}
+
+.food-imgs img {
+  width: 200px;
+  height: 200px;
+  margin-right: 10px;
+  transition: transform 1s ease;
+}
+
+.food-imgs img:hover {
+  transform: scale(1.2);
 }
 
 /* Media query for smaller screens */
@@ -111,7 +131,7 @@
       cursor: pointer;
       margin-right: 20px;
   }
-  .about {
+  .about-description {
     display: flex;
     align-items: center;
     justify-content:space-between;
