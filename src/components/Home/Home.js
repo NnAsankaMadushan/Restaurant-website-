@@ -40,12 +40,20 @@ const Home = () => {
             <div>
               <p>Welcome to <span>Burgers</span>, where flavor meets quality! Since our founding in 2010, we have been committed to crafting the most delicious and satisfying burgers in town. Our journey began with a simple yet powerful idea: to create a place where people could enjoy high-quality, gourmet burgers made from the freshest ingredients.</p>
 
+              <p>At Burgers, we believe in doing things differently. Every burger we serve is made to order, using 100% grass-fed beef, locally sourced produce, and freshly baked buns. Our dedication to quality extends to our kitchen, where our team of skilled chefs prepare each meal with passion and precision.</p>
+
               <p>Thank you for choosing Burgers. Whether you’re dining in, taking out, or ordering delivery, we are committed to providing you with an unforgettable dining experience. Join us today and discover why we’re not just serving food, but creating memories.</p>
 
               <p>Burgers - Taste the Difference.</p>
             </div>
           </div>
           <div className='food-imgs'>
+            <img src={food1} alt="food" />
+            <img src={food2} alt="food" />
+            <img src={food3} alt="food" />
+            <img src={food4} alt="food" />
+            <img src={food5} alt="food" />
+            <img src={food6} alt="food" />
             <img src={food1} alt="food" />
             <img src={food2} alt="food" />
             <img src={food3} alt="food" />

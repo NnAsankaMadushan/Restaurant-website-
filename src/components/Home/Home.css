@@ -53,30 +53,27 @@
 
 .homeContainer {
   padding: 0px 10%;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(40px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin-top: 150px;
 }
+
 .contactContainer {
   padding: 0px 10%;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(40px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  
 }
-.homeContainer h1 {
-  padding-top: 2%;
-  font-size: 45px
-}
+
+.homeContainer h1,
 .contactContainer h1 {
   padding-top: 2%;
-  font-size: 45px
+  font-size: 45px;
 }
 
 .about-description {
   display: flex;
   align-items: center;
-  justify-content:space-between;
-  /* padding: 20px; */
+  justify-content: space-between;
   border-radius: 10px;
   width: 100%;
   padding-top: 2%;
@@ -99,18 +96,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
-  overflow: hidden;
+  overflow-y: hidden;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
 }
 
 .food-imgs img {
   width: 200px;
-  height: 200px;
+  height: 100%;
+  margin: 0 10px;
   transition: transform 1s ease;
+  cursor: pointer;
 }
 
 .food-imgs img:hover {
   transform: scale(1.2);
+  height: 100%;
 }
 
 /* Media query for smaller screens */
@@ -120,7 +124,7 @@
     justify-content: center;
     flex-direction: column;
     background-color: #d3512a;
-    position:absolute;
+    position: absolute;
     top: 70px;
     right: 20px;
     width: 300px;
@@ -153,19 +157,19 @@
   }
 
   .toggle-button {
-      display: block;
-      background: none;
-      border: none;
-      color: #e63c08;
-      font-size: 24px;
-      cursor: pointer;
-      margin-right: 20px;
+    display: block;
+    background: none;
+    border: none;
+    color: #e63c08;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 20px;
   }
+
   .about-description {
     display: flex;
     align-items: center;
-    justify-content:space-between;
-    /* padding: 20px; */
+    justify-content: space-between;
     flex-direction: column;
     border-radius: 10px;
     width: 100%;
@@ -177,6 +181,6 @@
 /* Hide the toggle button on larger screens */
 @media (min-width: 801px) {
   .toggle-button {
-      display: none;
+    display: none;
   }
 }
