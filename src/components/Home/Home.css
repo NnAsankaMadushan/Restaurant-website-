@@ -80,6 +80,12 @@
   padding-top: 2%;
   padding-bottom: 2%;
 }
+.contact-block {
+ display: flex;
+ align-items: center;
+ flex-direction:column;
+  
+}
 
 .about-description img {
   width: 30%;
@@ -124,9 +130,29 @@
   backdrop-filter: blur(1000px);
   box-shadow: 0 4px 8px rgba(224, 176, 176, 0.2);
 }
-.contactInfo p{
-  font-size: 27px;
+.contactInfo p {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  margin: 10px 0; /* Adjust spacing between each line */
 }
+
+.contactInfo i {
+  margin-right: 10px; /* Adjust spacing between icon and text */
+  font-size: 22px;
+}
+
+.contactInfo .label {
+  width: 200px; /* Adjust to ensure all labels are the same width */
+  margin-right: 10px; /* Adjust spacing between label and details */
+  font-size: 22px;
+}
+
+
+.contactInfo span {
+  margin-left: 40px; /* Adjust spacing between label and details */
+}
+
 
 /* Media query for smaller screens */
 @media (max-width: 800px) {

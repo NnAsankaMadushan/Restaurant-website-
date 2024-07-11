@@ -81,15 +81,14 @@ const Home = () => {
       <div className='contactContainer'>
         <h1>Contact</h1>
         <section className='contact'>
-          <div className='about-description'>
+          <div className='contact-block'>
             <div className='contactInfo'>
-              <p><i className="fas fa-phone"></i> Telephone Number : 011 2 345 458</p>
-              <p><i className="fas fa-envelope"></i> Email : burgers@gmail.com</p>
-              <p><i className="fas fa-globe"></i> Website : www.burgers.com</p>
-              <p><i className="fab fa-facebook"></i> Facebook : www.facebook.com/burgers</p>
-              <p><i className="fab fa-facebook"></i> Facebook : www.facebook.com/burgers</p>
+              <p><i className="fas fa-phone"></i> <span className="label">Telephone Number</span> <span>: 011 2 345 458</span></p>
+              <p><i className="fas fa-envelope"></i> <span className="label">Email</span> <span>: burgers@gmail.com</span></p>
+              <p><i className="fas fa-globe"></i> <span className="label">Website</span> <span>: www.burgers.com</span></p>
+              <p><i className="fab fa-facebook"></i> <span className="label">Facebook</span> <span>: www.facebook.com/burgers</span></p>
             </div>
-            <img src={brandIcon} alt="Brand Icon" />
+            <img src={food1} alt="food" />
           </div>
         </section>
       </div>
