@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import brandIcon from '../Images/profile1.png';
 import food1 from '../Images/foods/food-1.png';
 import food2 from '../Images/foods/food-2.png';
@@ -6,7 +6,7 @@ import food3 from '../Images/foods/food-3.png';
 import food4 from '../Images/foods/food-4.png';
 import food5 from '../Images/foods/food-5.png';
 import food6 from '../Images/foods/food-6.png';
-import "./Home.css";
+import './Home.css';
 
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,18 +14,6 @@ const Home = () => {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
-
-  // useEffect(() => {
-  //   const scrollInterval = setInterval(() => {
-  //     const foodImgs = document.querySelector('.food-imgs');
-  //     if (foodImgs) {
-  //       const firstImg = foodImgs.firstElementChild;
-  //       foodImgs.appendChild(firstImg);
-  //     }
-  //   }, 2000); // Change image every 2 seconds
-
-  //   return () => clearInterval(scrollInterval);
-  // }, []);
 
   return (
     <div className='container'>
@@ -45,7 +33,7 @@ const Home = () => {
         </div>
       </nav>
       <div className='homeContainer'>
-      <h1>About Us</h1>
+        <h1>About Us</h1>
         <section className='about'>
           <div className='about-description'>
             <img src={brandIcon} alt="Brand Icon" />
@@ -71,7 +59,7 @@ const Home = () => {
         <h1>Contact</h1>
         <section className='contact'>
           <div className='about-description'>
-          <div>
+            <div>
               <p>Welcome to <span>Burgers</span>, where flavor meets quality! Since our founding in 2010, we have been committed to crafting the most delicious and satisfying burgers in town. Our journey began with a simple yet powerful idea: to create a place where people could enjoy high-quality, gourmet burgers made from the freshest ingredients.</p>
 
               <p>Thank you for choosing Burgers. Whether you’re dining in, taking out, or ordering delivery, we are committed to providing you with an unforgettable dining experience. Join us today and discover why we’re not just serving food, but creating memories.</p>
