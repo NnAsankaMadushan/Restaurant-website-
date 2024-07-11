@@ -57,7 +57,17 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin-top: 150px;
 }
+.contactContainer {
+  padding: 0px 10%;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
+}
 .homeContainer h1 {
+  padding-top: 2%;
+  font-size: 45px
+}
+.contactContainer h1 {
   padding-top: 2%;
   font-size: 45px
 }
@@ -87,16 +97,15 @@
 
 .food-imgs {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .food-imgs img {
   width: 200px;
   height: 200px;
-  margin-right: 10px;
   transition: transform 1s ease;
 }
 
