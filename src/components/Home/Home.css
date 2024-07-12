@@ -248,19 +248,22 @@ margin-top: 2%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  /* flex-wrap: wrap; */
 }
 .burger-content-row{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .food-item{
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
+  /* flex-wrap: wrap; */
 }
 
 .food-details{
