@@ -285,6 +285,16 @@ margin-top: 2%;
   height: 250px;
 }
 
+.food-photo img {
+  transition: transform 1s ease;
+  cursor: pointer;
+}
+
+.food-photo img:hover {
+  transform: scale(1.2);
+  height: 100%;
+}
+
 .order-buttons{
   display: flex;
   justify-content: space-between;
