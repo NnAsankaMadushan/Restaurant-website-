@@ -164,23 +164,23 @@ margin-top: 2%;
   display: flex;
   align-items: center;
   font-size: 22px;
-  margin: 10px 0; /* Adjust spacing between each line */
+  margin: 10px 0; 
 }
 
 .contactInfo i {
-  margin-right: 10px; /* Adjust spacing between icon and text */
+  margin-right: 10px; 
   font-size: 22px;
 }
 
 .contactInfo .label {
-  width: 200px; /* Adjust to ensure all labels are the same width */
-  margin-right: 10px; /* Adjust spacing between label and details */
+  width: 200px; 
+  margin-right: 10px; 
   font-size: 22px;
 }
 
 
 .contactInfo span {
-  margin-left: 40px; /* Adjust spacing between label and details */
+  margin-left: 40px; 
 }
 
 .contact-form, .contact-info {
@@ -196,7 +196,7 @@ margin-top: 2%;
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  /* border: 1px solid #ccc; */
+  
   border-radius: 5px;
   font-size: 17px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -229,7 +229,7 @@ margin-top: 2%;
   margin-top: 40px;
   text-align: center;
   padding: 40px;
-  /* background-color: #ccaa7c; */
+  
   border-radius: 15px;
   margin-bottom: 10px;
   height: 25vh;
@@ -314,7 +314,6 @@ margin-top: 2%;
   background-color: #e88c2c;
 }
 
-/* Media query for smaller screens */
 @media (max-width: 800px) {
   .navbar-info {
     display: none;
@@ -375,7 +374,6 @@ margin-top: 2%;
   }
 }
 
-/* Hide the toggle button on larger screens */
 @media (min-width: 801px) {
   .toggle-button {
     display: none;

@@ -10,6 +10,7 @@ import './Home.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWordpressSimple, FaGlobe, FaFacebook } from 'react-icons/fa';
 import { FaCartShopping } from 'react-icons/fa6';
+import { Helmet } from 'react-helmet';
 
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,14 +24,28 @@ const Home = () => {
     const scrollInterval = setInterval(() => {
       if (foodImgsRef.current) {
         foodImgsRef.current.scrollBy({
-          left: 200, // Adjust this value for the desired scroll distance
+          left: 200,
           behavior: 'smooth',
         });
       }
-    }, 2000); // Adjust this value for the desired scroll interval (in milliseconds)
-
+    }, 2000);
     return () => clearInterval(scrollInterval);
   }, []);
+  const mapRef = useRef(null);
+  useEffect(() => {
+    if (window.google) {
+      initMap();
+    } else {
+      window.initMap = initMap;
+    }
+  }, []);
+
+  const initMap = () => {
+    const map = new window.google.maps.Map(mapRef.current, {
+      center: { lat: 5.96359, lng: 80.60980 },
+      zoom: 15,
+    });
+  };
 
   return (
     <div className='container'>
@@ -299,11 +314,18 @@ const Home = () => {
         </div>
       </div>
         </section>
-        <div className="contact-map">
-        {/* <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdEyxENGQgPhnycD8qtAs0S-Wy6ge0ZiI&callback=initMap">
-        </script> */}
-        </div>
-        {/* <div className='contactImage'><img src={food1} alt="food" /></div> */}
+        <div
+        id="map"
+        ref={mapRef}
+        className="contact-map"
+      ></div>
+        <Helmet>
+        <script
+          async
+          defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdEyxENGQgPhnycD8qtAs0S-Wy6ge0ZiI&callback=initMap"
+        ></script>
+      </Helmet>
       </div>
     </div>
   );
