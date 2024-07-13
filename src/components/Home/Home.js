@@ -15,6 +15,7 @@ import { Helmet } from 'react-helmet';
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const foodImgsRef = useRef(null);
+  const [selectedCategory, setSelectedCategory] = useState('Burgers');
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -45,6 +46,219 @@ const Home = () => {
       center: { lat: 5.96359, lng: 80.60980 },
       zoom: 15,
     });
+  };
+
+  const renderContent = () => {
+    switch (selectedCategory) {
+      case 'Burgers':
+        return <div>
+          <div className='burger-content'>
+            <div className='burger-content-row'>
+              <div className='food-item'>
+                <img className='food-photo' src={food3} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+              <div className='food-item'>
+                <img className='food-photo' src={food4} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className='food-item'>
+                <img className='food-photo' src={food3} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+              <div className='food-item'>
+                <img className='food-photo' src={food4} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className='food-item'>
+                <img className='food-photo' src={food3} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+              <div className='food-item'>
+                <img className='food-photo' src={food4} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+              
+              
+              <div className='food-item'>
+                <img className='food-photo' src={food3} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+              <div className='food-item'>
+                <img className='food-photo' src={food4} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>;
+      case 'Desserts':
+        return <div>
+          <div className='burger-content'>
+            <div className='burger-content-row'>
+              <div className='food-item'>
+                <img className='food-photo' src={food1} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+              <div className='food-item'>
+                <img className='food-photo' src={food2} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className='food-item'>
+                <img className='food-photo' src={food1} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+              <div className='food-item'>
+                <img className='food-photo' src={food2} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className='food-item'>
+                <img className='food-photo' src={food1} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+              <div className='food-item'>
+                <img className='food-photo' src={food2} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+              
+              
+              <div className='food-item'>
+                <img className='food-photo' src={food1} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+              <div className='food-item'>
+                <img className='food-photo' src={food2} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>;
+      case 'Drinks':
+        return <div>Drinks Content</div>;
+      case 'Pasta':
+        return <div>Pasta Content</div>;
+      case 'Pizzas':
+        return <div>Pizzas Content</div>;
+      case 'Salads':
+        return <div>Salads Content</div>;
+      default:
+        return null;
+    }
   };
 
   return (
@@ -99,15 +313,16 @@ const Home = () => {
       <div className='orderContainer'>
       <h1>Orders</h1>
         <section className='orders'>
-          <div className='orders-content'>
-            <div className='order-kind'>Burgers</div>
-            <div className='order-kind'>Desserts</div>
-            <div className='order-kind'>Drinks</div>
-            <div className='order-kind'>Pasta</div>
-            <div className='order-kind'>Pizzas</div>
-            <div className='order-kind'>Salads</div>
+        <div className='orders-content'>
+            <div className='order-kind' onClick={() => setSelectedCategory('Burgers')}>Burgers</div>
+            <div className='order-kind' onClick={() => setSelectedCategory('Desserts')}>Desserts</div>
+            <div className='order-kind' onClick={() => setSelectedCategory('Drinks')}>Drinks</div>
+            <div className='order-kind' onClick={() => setSelectedCategory('Pasta')}>Pasta</div>
+            <div className='order-kind' onClick={() => setSelectedCategory('Pizzas')}>Pizzas</div>
+            <div className='order-kind' onClick={() => setSelectedCategory('Salads')}>Salads</div>
           </div>
-          <div className='burger-content'>
+          {renderContent()}
+          {/* <div className='burger-content'>
             <div className='burger-content-row'>
               <div className='food-item'>
                 <img className='food-photo' src={food1} alt="food-item-1"/>
@@ -286,7 +501,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           
         </section>
       </div>
