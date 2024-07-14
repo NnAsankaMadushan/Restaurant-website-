@@ -253,6 +253,105 @@ const Home = () => {
           <div className='burger-content'>
             <div className='burger-content-row'>
               <div className='food-item'>
+                <img className='food-photo' src={food3} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+              <div className='food-item'>
+                <img className='food-photo' src={food3} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className='food-item'>
+                <img className='food-photo' src={food3} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+              <div className='food-item'>
+                <img className='food-photo' src={food3} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className='food-item'>
+                <img className='food-photo' src={food3} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+              <div className='food-item'>
+                <img className='food-photo' src={food3} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+              
+              
+              <div className='food-item'>
+                <img className='food-photo' src={food3} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+              <div className='food-item'>
+                <img className='food-photo' src={food3} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button'>See Details</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>;
+      case 'Pasta':
+        return <div>
+          <div className='burger-content'>
+            <div className='burger-content-row'>
+              <div className='food-item'>
                 <img className='food-photo' src={food2} alt="food-item-1"/>
                 <div className='food-details'>
                   <h2>Large Pizza</h2>
@@ -347,8 +446,6 @@ const Home = () => {
             </div>
           </div>
         </div>;
-      case 'Pasta':
-        return <div>Pasta Content</div>;
       case 'Pizzas':
         return <div>Pizzas Content</div>;
       case 'Salads':
