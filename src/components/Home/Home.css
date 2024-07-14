@@ -91,18 +91,25 @@
 }
 .orders-content{
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
   border-radius: 10px;
   width: 100%;
   padding-top: 2%;
   padding-bottom: 2%;
+  gap: 10%;
 }
 .order-kind{
-  margin-right: 10%;
+  /* margin-right: 10%; */
   font-size: 25px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   cursor: pointer;
+  text-decoration: none;
+  color: #ffffff;
+  transition: 0.3s;
+  margin-top: 10px;
 }
 .order-kind :hover{
   color: #af631c;
