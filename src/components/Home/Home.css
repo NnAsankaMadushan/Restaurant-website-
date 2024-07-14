@@ -104,6 +104,9 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   cursor: pointer;
 }
+.order-kind :hover{
+  color: #af631c;
+}
 
 .contact-block {
  display: flex;
