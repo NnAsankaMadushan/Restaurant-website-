@@ -101,6 +101,12 @@
   padding-bottom: 2%;
   gap: 10%;
 }
+.orders-content a{
+  transition: .3s;
+}
+.orders-content a:hover{
+  color: #e63c08;
+}
 .order-kind{
   /* margin-right: 10%; */
   font-size: 25px;
