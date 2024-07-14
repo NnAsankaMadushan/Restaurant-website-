@@ -45,8 +45,8 @@ const Login = () => {
           ☰
         </button>
         <div className={`navbar-info ${menuOpen ? 'show' : ''}`}>
-          <div>Email: info@brand.com</div>
-          <div>Phone: (123) 456-7890</div>
+          <div>Email: info@burgers.com</div>
+          <div>Phone: 011 234-5678</div>
           <div className='signinup'>
             <a href="#" onClick={() => setIsFlipped(false)}>Sign Up</a>
             <a href="#" onClick={() => setIsFlipped(true)}>Sign In</a>
