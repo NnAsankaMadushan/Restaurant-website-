@@ -508,12 +508,12 @@ const Home = () => {
       <h1>Orders</h1>
         <section className='orders'>
         <nav id="orders-content" className='orders-content'>
-            <a href='#' className='order-kind' onClick={() => setSelectedCategory('Burgers')}>Burgers</a>
-            <a href='#' className='order-kind' onClick={() => setSelectedCategory('Desserts')}>Desserts</a>
-            <a href='#' className='order-kind' onClick={() => setSelectedCategory('Drinks')}>Drinks</a>
-            <a href='#' className='order-kind' onClick={() => setSelectedCategory('Pasta')}>Pasta</a>
-            <a href='#' className='order-kind' onClick={() => setSelectedCategory('Pizzas')}>Pizzas</a>
-            <a href='#' className='order-kind' onClick={() => setSelectedCategory('Salads')}>Salads</a>
+            <a className='order-kind' onClick={() => setSelectedCategory('Burgers')}>Burgers</a>
+            <a className='order-kind' onClick={() => setSelectedCategory('Desserts')}>Desserts</a>
+            <a className='order-kind' onClick={() => setSelectedCategory('Drinks')}>Drinks</a>
+            <a className='order-kind' onClick={() => setSelectedCategory('Pasta')}>Pasta</a>
+            <a className='order-kind' onClick={() => setSelectedCategory('Pizzas')}>Pizzas</a>
+            <a className='order-kind' onClick={() => setSelectedCategory('Salads')}>Salads</a>
           </nav>
           {renderContent()}
           {/* <div className='burger-content'>
