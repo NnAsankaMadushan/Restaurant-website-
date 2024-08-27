@@ -11,8 +11,24 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWordpressSimple, FaGlobe, FaFacebook } from 'react-icons/fa';
 import { FaCartShopping } from 'react-icons/fa6';
 import { Helmet } from 'react-helmet';
+import FoodDetails from '../FoodShow/FoodDetails'
 
 const Home = () => {
+const [showModal, setShowModal] = useState(false);
+
+const foodItem = {
+  name: 'Large Pizza',
+  price: 200,
+  image: food2
+};
+
+const handleDetailsClick = () => {
+  setShowModal(true);
+};
+
+const handleCloseModal = () => {
+  setShowModal(false);
+};
   const [menuOpen, setMenuOpen] = useState(false);
   const foodImgsRef = useRef(null);
   const [selectedCategory, setSelectedCategory] = useState('Burgers');
@@ -61,9 +77,11 @@ const Home = () => {
                   <h3>Price: 200/=</h3>
                   <div className='order-buttons'>
                     <div className='cart-but button'><FaCartShopping /> Add to cart</div>
-                    <div className='details-but button'>See Details</div>
+                    <div className='details-but button' onClick={handleDetailsClick}>See Details</div>
                   </div>
                 </div>
+                {/* Render the modal */}
+      <FoodDetails show={showModal} onClose={handleCloseModal} foodItem={foodItem} />
               </div>
               <div className='food-item'>
                 <img className='food-photo' src={food4} alt="food-item-1"/>
