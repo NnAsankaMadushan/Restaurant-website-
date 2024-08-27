@@ -19,7 +19,7 @@ const [showModal, setShowModal] = useState(false);
 const foodItem = {
   name: 'Large Pizza',
   price: 200,
-  image: food3
+  image: food4
 };
 
 const handleDetailsClick = () => {
@@ -90,7 +90,7 @@ const handleCloseModal = () => {
                   <h3>Price: 200/=</h3>
                   <div className='order-buttons'>
                     <div className='cart-but button'><FaCartShopping /> Add to cart</div>
-                    <div className='details-but button'>See Details</div>
+                    <div className='details-but button' onClick={handleDetailsClick}>See Details</div>
                   </div>
                 </div>
               </div>
@@ -102,7 +102,7 @@ const handleCloseModal = () => {
                   <h3>Price: 200/=</h3>
                   <div className='order-buttons'>
                     <div className='cart-but button'><FaCartShopping /> Add to cart</div>
-                    <div className='details-but button'>See Details</div>
+                    <div className='details-but button' onClick={handleDetailsClick}>See Details</div>
                   </div>
                 </div>
               </div>
@@ -113,10 +113,34 @@ const handleCloseModal = () => {
                   <h3>Price: 200/=</h3>
                   <div className='order-buttons'>
                     <div className='cart-but button'><FaCartShopping /> Add to cart</div>
-                    <div className='details-but button'>See Details</div>
+                    <div className='details-but button' onClick={handleDetailsClick}>See Details</div>
                   </div>
                 </div>
               </div>
+              
+              <div className='food-item'>
+                <img className='food-photo' src={food4} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button' onClick={handleDetailsClick}>See Details</div>
+                  </div>
+                </div>
+              </div>
+              <div className='food-item'>
+                <img className='food-photo' src={food4} alt="food-item-1"/>
+                <div className='food-details'>
+                  <h2>Large Pizza</h2>
+                  <h3>Price: 200/=</h3>
+                  <div className='order-buttons'>
+                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
+                    <div className='details-but button' onClick={handleDetailsClick}>See Details</div>
+                  </div>
+                </div>
+              </div>
+              
               
               <div className='food-item'>
                 <img className='food-photo' src={food4} alt="food-item-1"/>
@@ -125,7 +149,7 @@ const handleCloseModal = () => {
                   <h3>Price: 200/=</h3>
                   <div className='order-buttons'>
                     <div className='cart-but button'><FaCartShopping /> Add to cart</div>
-                    <div className='details-but button'>See Details</div>
+                    <div className='details-but button' onClick={handleDetailsClick}>See Details</div>
                   </div>
                 </div>
               </div>
@@ -136,31 +160,7 @@ const handleCloseModal = () => {
                   <h3>Price: 200/=</h3>
                   <div className='order-buttons'>
                     <div className='cart-but button'><FaCartShopping /> Add to cart</div>
-                    <div className='details-but button'>See Details</div>
-                  </div>
-                </div>
-              </div>
-              
-              
-              <div className='food-item'>
-                <img className='food-photo' src={food4} alt="food-item-1"/>
-                <div className='food-details'>
-                  <h2>Large Pizza</h2>
-                  <h3>Price: 200/=</h3>
-                  <div className='order-buttons'>
-                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
-                    <div className='details-but button'>See Details</div>
-                  </div>
-                </div>
-              </div>
-              <div className='food-item'>
-                <img className='food-photo' src={food4} alt="food-item-1"/>
-                <div className='food-details'>
-                  <h2>Large Pizza</h2>
-                  <h3>Price: 200/=</h3>
-                  <div className='order-buttons'>
-                    <div className='cart-but button'><FaCartShopping /> Add to cart</div>
-                    <div className='details-but button'>See Details</div>
+                    <div className='details-but button' onClick={handleDetailsClick}>See Details</div>
                   </div>
                 </div>
               </div>
@@ -178,7 +178,7 @@ const handleCloseModal = () => {
                   <h3>Price: 200/=</h3>
                   <div className='order-buttons'>
                     <div className='cart-but button'><FaCartShopping /> Add to cart</div>
-                    <div className='details-but button'>See Details</div>
+                    <div className='details-but button' onClick={handleDetailsClick}>See Details</div>
                   </div>
                 </div>
               </div>

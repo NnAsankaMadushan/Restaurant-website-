@@ -52,10 +52,13 @@
     top: 10px;
     right: 10px;
     background: none;
-    border: none;
+    border-color:  #e63c08;
+    border-radius: 50%;
+    border-width: 5px;
     font-size: 20px;
     cursor: pointer;
-    color: red;
+    color: #ffff;
+    background-color: #af631c;
   }
   
   .add-to-cart {
@@ -72,3 +75,10 @@
     align-items: center;
     gap: 50px;
   }
+.food-photo-show{
+  background-image: url(./pattern.png);
+  background-size: cover;
+  width: 250px;
+  height: 250px;
+  align-items: center;
+}

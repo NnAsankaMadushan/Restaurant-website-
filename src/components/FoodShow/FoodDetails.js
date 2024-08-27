@@ -13,7 +13,7 @@ const FoodDetails = ({ show, onClose, foodItem }) => {
       <button onClick={onClose} className="close-button">X</button>
         <div className='food-container'>
             <div className='food-photo'>
-                <img className='food-photo' src={foodItem.image} alt={foodItem.name}/>
+                <img className='food-photo-show' src={foodItem.image} alt={foodItem.name}/>
             </div>
             <div className='order'>
                 <div>
