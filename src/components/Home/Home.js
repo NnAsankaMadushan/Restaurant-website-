@@ -19,7 +19,7 @@ const [showModal, setShowModal] = useState(false);
 const foodItem = {
   name: 'Large Pizza',
   price: 200,
-  image: food2
+  image: food3
 };
 
 const handleDetailsClick = () => {
