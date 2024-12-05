@@ -6,6 +6,9 @@ import food3 from '../Images/foods/food-3.png';
 import food4 from '../Images/foods/food-4.png';
 import food5 from '../Images/foods/food-5.png';
 import food6 from '../Images/foods/food-6.png';
+import table from '../Images/table.png';
+import booked from '../Images/booked.png';
+import available from '../Images/available.png';
 import './Home.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWordpressSimple, FaGlobe, FaFacebook } from 'react-icons/fa';
@@ -14,6 +17,41 @@ import { Helmet } from 'react-helmet';
 import FoodDetails from '../FoodShow/FoodDetails'
 
 const Home = () => {
+const seats = [
+  // table 1
+  { id: 1, top: "13%", left: "15%" },
+  { id: 2, top: "13%", left: "25%" },
+  { id: 3, top: "13%", left: "35%" },
+  { id: 5, top: "37%", left: "15%" },
+  { id: 7, top: "37%", left: "25%" },
+  { id: 8, top: "37%", left: "35%" },
+  { id: 9, top: "25%", left: "41%" },
+  { id: 10, top: "25%", left: "10%" },
+
+  // tabele 2
+  { id: 1, top: "63%", left: "15%" },
+  { id: 2, top: "63%", left: "25%" },
+  { id: 3, top: "63%", left: "35%" },
+  { id: 5, top: "90%", left: "15%" },
+  { id: 7, top: "90%", left: "25%" },
+  { id: 8, top: "90%", left: "35%" },
+  { id: 9, top: "77%", left: "41%" },
+  { id: 10, top: "77%", left: "10%" },
+
+  // table 3
+  { id: 1, top: "24%", left: "65%" },
+  { id: 2, top: "24%", left: "54%" },
+
+  // table 4
+  { id: 1, top: "77%", left: "65%" },
+  { id: 2, top: "77%", left: "54%" },
+
+  // table 5
+  { id: 1, top: "50%", left: "88%" },
+  { id: 2, top: "50%", left: "76%" },
+
+
+];
 const [showModal, setShowModal] = useState(false);
 
 const foodItem = {
@@ -718,6 +756,22 @@ const handleCloseModal = () => {
           
         </section>
       </div>
+    <div className="bookingContainer">
+      <h1>Booking</h1>
+    <section className="booking">
+      <img className="table" src={table} alt="Table" />
+      {seats.map((seat) => (
+        <div
+          key={seat.id}
+          className="seat"
+          style={{ top: seat.top, left: seat.left }}
+        >
+          <img src={available} alt="Seat Available" />
+        </div>
+      ))}
+    </section>
+</div>
+
       <div className='contactContainer'>
         <h1>Contact Us</h1>
         <section className='contact'>
@@ -749,11 +803,7 @@ const handleCloseModal = () => {
       ></div>
 
       </div>
-      <div className='contactContainer'>
-        <h1>Booking</h1>
-        <section className='booking'>
-        </section>
-      </div>
+
     </div>
   );
 }
