@@ -17,41 +17,48 @@ import { Helmet } from 'react-helmet';
 import FoodDetails from '../FoodShow/FoodDetails'
 
 const Home = () => {
-const seats = [
+const [seats, setSeats] = useState ([
   // table 1
-  { id: 1, top: "13%", left: "15%" },
-  { id: 2, top: "13%", left: "25%" },
-  { id: 3, top: "13%", left: "35%" },
-  { id: 5, top: "37%", left: "15%" },
-  { id: 7, top: "37%", left: "25%" },
-  { id: 8, top: "37%", left: "35%" },
-  { id: 9, top: "25%", left: "41%" },
-  { id: 10, top: "25%", left: "10%" },
+  { id: 1, top: "6%", left: "15%", isBooked: false },
+  { id: 2, top: "6%", left: "25%", isBooked: false },
+  { id: 3, top: "6%", left: "35%", isBooked: false },
+  { id: 4, top: "30%", left: "15%", isBooked: false },
+  { id: 5, top: "30%", left: "25%", isBooked: false },
+  { id: 6, top: "30%", left: "35%", isBooked: false },
+  { id: 7, top: "18%", left: "41%", isBooked: false },
+  { id: 8, top: "18%", left: "10%", isBooked: false },
 
   // tabele 2
-  { id: 1, top: "63%", left: "15%" },
-  { id: 2, top: "63%", left: "25%" },
-  { id: 3, top: "63%", left: "35%" },
-  { id: 5, top: "90%", left: "15%" },
-  { id: 7, top: "90%", left: "25%" },
-  { id: 8, top: "90%", left: "35%" },
-  { id: 9, top: "77%", left: "41%" },
-  { id: 10, top: "77%", left: "10%" },
+  { id: 9, top: "63%", left: "15%", isBooked: false },
+  { id: 10, top: "63%", left: "25%", isBooked: false },
+  { id: 11, top: "63%", left: "35%", isBooked: false },
+  { id: 12, top: "86%", left: "15%", isBooked: false },
+  { id: 13, top: "86%", left: "25%", isBooked: false },
+  { id: 14, top: "86%", left: "35%", isBooked: false },
+  { id: 15, top: "75%", left: "41%", isBooked: false },
+  { id: 16, top: "75%", left: "10%", isBooked: false },
 
   // table 3
-  { id: 1, top: "24%", left: "65%" },
-  { id: 2, top: "24%", left: "54%" },
+  { id: 17, top: "19%", left: "65%", isBooked: false },
+  { id: 18, top: "19%", left: "54%", isBooked: false },
 
   // table 4
-  { id: 1, top: "77%", left: "65%" },
-  { id: 2, top: "77%", left: "54%" },
+  { id: 19, top: "75%", left: "65%", isBooked: false },
+  { id: 20, top: "75%", left: "54%", isBooked: false },
 
   // table 5
-  { id: 1, top: "50%", left: "88%" },
-  { id: 2, top: "50%", left: "76%" },
+  { id: 21, top: "47%", left: "88%", isBooked: false },
+  { id: 22, top: "47%", left: "77%", isBooked: false }
+]);
+
+const toggleSeat = (id) => {
+  setSeats((prevSeats) => 
+    prevSeats.map((seat) => 
+    seat.id === id ? {...seat, isBooked: !seat.isBooked}:seat)
+  )
+}
 
 
-];
 const [showModal, setShowModal] = useState(false);
 
 const foodItem = {
@@ -765,12 +772,16 @@ const handleCloseModal = () => {
           key={seat.id}
           className="seat"
           style={{ top: seat.top, left: seat.left }}
+          onClick={() => toggleSeat(seat.id)}
         >
-          <img src={available} alt="Seat Available" />
+           <img 
+          src={seat.isBooked ? booked : available} 
+          alt={seat.isBooked ? "Seat Booked" : "Seat Available"} 
+        />
         </div>
       ))}
-    </section>
-</div>
+      </section>
+    </div>
 
       <div className='contactContainer'>
         <h1>Contact Us</h1>

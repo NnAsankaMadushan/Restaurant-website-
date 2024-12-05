@@ -401,28 +401,41 @@ margin-top: 2%;
   border-width: 200px;
   border: solid;
   padding: 20px 50px;
+  border-radius: 40px;
+  /* background-color: #312323; */
 }
 
 .bookingContainer{
-  backdrop-filter: blur(40px);
+  backdrop-filter: blur(100px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 10px 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 .booking{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 .seat {
   position: absolute;
-  width: 2%; /* Adjust size as needed */
+  width: 2%; 
 }
 
 .seat img {
   width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.seat img:hover {
+  transform: scale(1.5);
+}
+.bookingContainer h1{
+  font-size: 40px;
 }
