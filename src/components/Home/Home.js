@@ -17,46 +17,80 @@ import { Helmet } from 'react-helmet';
 import FoodDetails from '../FoodShow/FoodDetails'
 
 const Home = () => {
-const [seats, setSeats] = useState ([
-  // table 1
-  { id: 1, top: "6%", left: "15%", isBooked: false },
-  { id: 2, top: "6%", left: "25%", isBooked: false },
-  { id: 3, top: "6%", left: "35%", isBooked: false },
-  { id: 4, top: "30%", left: "15%", isBooked: false },
-  { id: 5, top: "30%", left: "25%", isBooked: false },
-  { id: 6, top: "30%", left: "35%", isBooked: false },
-  { id: 7, top: "18%", left: "41%", isBooked: false },
-  { id: 8, top: "18%", left: "10%", isBooked: false },
+const [seats, setSeats] =useState([]);
+const [selectedSeats,setSelectedSeats] = useState ([]);
+useEffect(() => {
+  setSeats([
+    // table 1
+    { id: 1, top: "6%", left: "15%", isBooked: false },
+    { id: 2, top: "6%", left: "25%", isBooked: false },
+    { id: 3, top: "6%", left: "35%", isBooked: false },
+    { id: 4, top: "30%", left: "15%", isBooked: false },
+    { id: 5, top: "30%", left: "25%", isBooked: false },
+    { id: 6, top: "30%", left: "35%", isBooked: false },
+    { id: 7, top: "18%", left: "41%", isBooked: false },
+    { id: 8, top: "18%", left: "10%", isBooked: false },
+  
+    // tabele 2
+    { id: 9, top: "63%", left: "15%", isBooked: false },
+    { id: 10, top: "63%", left: "25%", isBooked: false },
+    { id: 11, top: "63%", left: "35%", isBooked: false },
+    { id: 12, top: "86%", left: "15%", isBooked: false },
+    { id: 13, top: "86%", left: "25%", isBooked: false },
+    { id: 14, top: "86%", left: "35%", isBooked: false },
+    { id: 15, top: "75%", left: "41%", isBooked: false },
+    { id: 16, top: "75%", left: "10%", isBooked: false },
+  
+    // table 3
+    { id: 17, top: "19%", left: "65%", isBooked: false },
+    { id: 18, top: "19%", left: "54%", isBooked: false },
+  
+    // table 4
+    { id: 19, top: "75%", left: "65%", isBooked: false },
+    { id: 20, top: "75%", left: "54%", isBooked: false },
+  
+    // table 5
+    { id: 21, top: "47%", left: "88%", isBooked: false },
+    { id: 22, top: "47%", left: "77%", isBooked: false },
+  ]);
+},[]);
+  
 
-  // tabele 2
-  { id: 9, top: "63%", left: "15%", isBooked: false },
-  { id: 10, top: "63%", left: "25%", isBooked: false },
-  { id: 11, top: "63%", left: "35%", isBooked: false },
-  { id: 12, top: "86%", left: "15%", isBooked: false },
-  { id: 13, top: "86%", left: "25%", isBooked: false },
-  { id: 14, top: "86%", left: "35%", isBooked: false },
-  { id: 15, top: "75%", left: "41%", isBooked: false },
-  { id: 16, top: "75%", left: "10%", isBooked: false },
-
-  // table 3
-  { id: 17, top: "19%", left: "65%", isBooked: false },
-  { id: 18, top: "19%", left: "54%", isBooked: false },
-
-  // table 4
-  { id: 19, top: "75%", left: "65%", isBooked: false },
-  { id: 20, top: "75%", left: "54%", isBooked: false },
-
-  // table 5
-  { id: 21, top: "47%", left: "88%", isBooked: false },
-  { id: 22, top: "47%", left: "77%", isBooked: false }
-]);
 
 const toggleSeat = (id) => {
-  setSeats((prevSeats) => 
-    prevSeats.map((seat) => 
-    seat.id === id ? {...seat, isBooked: !seat.isBooked}:seat)
-  )
-}
+  setSeats((prevSeats) =>
+    prevSeats.map((seat) => {
+      if (seat.id === id) {
+        const isNowBooked = !seat.isBooked;
+
+        setSelectedSeats((prevSelected) => {
+          if (isNowBooked) {
+            // Add the seat if it's being booked and not already in the list
+            return [...prevSelected, seat].filter(
+              (value, index, self) =>
+                index === self.findIndex((s) => s.id === value.id)
+            );
+          } else {
+            // Remove the seat if it's being unbooked
+            return prevSelected.filter((s) => s.id !== id);
+          }
+        });
+
+        return { ...seat, isBooked: isNowBooked };
+      }
+      return seat;
+    })
+  );
+};
+
+const handleConfirmBooking = () => {
+  if (selectedSeats.length > 0) {
+    alert(`You have successfully booked the following seats: ${selectedSeats.map(seat => seat.id).join(", ")}`);
+    // You can add any other logic for confirming the booking here, like saving the data to a server or resetting the selection.
+  } else {
+    alert("Please select at least one seat.");
+  }
+};
 
 
 const [showModal, setShowModal] = useState(false);
@@ -763,24 +797,52 @@ const handleCloseModal = () => {
           
         </section>
       </div>
-    <div className="bookingContainer">
+      <div className="bookingContainer">
       <h1>Booking</h1>
-    <section className="booking">
-      <img className="table" src={table} alt="Table" />
-      {seats.map((seat) => (
-        <div
-          key={seat.id}
-          className="seat"
-          style={{ top: seat.top, left: seat.left }}
-          onClick={() => toggleSeat(seat.id)}
-        >
-           <img 
-          src={seat.isBooked ? booked : available} 
-          alt={seat.isBooked ? "Seat Booked" : "Seat Available"} 
-        />
-        </div>
-      ))}
+      <section className="booking">
+        <img className="table" src={table} alt="Table" />
+        {Array.isArray(seats) &&
+          seats.map((seat) => (
+            <div
+              key={seat.id}
+              className="seat"
+              style={{ top: seat.top, left: seat.left }}
+              onClick={() => toggleSeat(seat.id)}
+            >
+              <img
+                src={seat.isBooked ? booked : available}
+                alt={seat.isBooked ? "Seat Booked" : "Seat Available"}
+              />
+            </div>
+          ))}
       </section>
+
+      <div className="list-booking">
+        <h1>Selected Seats</h1>
+        <div className="select-seat">
+      {selectedSeats.length === 0 ? (
+        <h2>No seats are selected yet</h2> 
+      ) : (
+        selectedSeats.map((seat) => (
+          <div key={seat.id} className="selected-seat">
+            <img className="seat" src={available} alt={`Seat ${seat.id}`} />
+            <div>
+              <h1 className="seat-id" style={{ color: "black" }}>
+                Seat Number {seat.id}
+              </h1>
+            </div>
+          </div>
+        ))
+      )}
+    </div>
+        <div className='confirm'>
+          {selectedSeats.length > 0 && (
+            <button className="confirm-button" onClick={handleConfirmBooking}>
+              Confirm Booking
+            </button>
+          )}
+        </div>
+      </div>
     </div>
 
       <div className='contactContainer'>

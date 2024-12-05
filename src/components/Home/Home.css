@@ -72,7 +72,8 @@
 
 .homeContainer h1,
 .contactContainer h1, 
-.orderContainer h1 {
+.orderContainer h1 
+{
   padding-top: 2%;
   font-size: 40px;
   margin-bottom: 0;
@@ -433,9 +434,79 @@ margin-top: 2%;
   transition: transform 0.3s ease;
 }
 
-.seat img:hover {
-  transform: scale(1.5);
+.list-booking {
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
 }
-.bookingContainer h1{
-  font-size: 40px;
+
+.select-seat {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 5fr));
+  gap: 10px;
+  padding: 0px 10%;
+}
+
+.selected-seat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+
+}
+
+.selected-seat img {
+  width: 50px;
+  height: 50px;
+  margin-top: -50px;
+}
+
+.seat-id {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 120px;
+  text-align: center;
+}
+
+.list-booking h1{
+  font-size: 38px;
+  padding-bottom: 2%;
+  margin-bottom: 0;
+  text-align: center;
+}
+.select-seat h2{
+  font-size: 25px;
+  padding-bottom: 2%;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.confirm-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 24px;
+  background-color: #4CAF50; /* Green */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.confirm-button:hover {
+  background-color: #45a049;
+}
+
+.confirm-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+.confirm{
+  display: flex;
+  justify-content: center;
 }
