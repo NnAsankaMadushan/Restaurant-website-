@@ -486,6 +486,7 @@ const handleCloseModal = () => {
         <div className={`navbar-info ${menuOpen ? 'show' : ''}`}>
           <div>Home</div>
           <div>Orders</div>
+          <div>Booking</div>
           <div>Contact</div>
           <div>About</div>
           <div className='cart'><FaCartShopping /></div>
@@ -737,7 +738,7 @@ const handleCloseModal = () => {
           <p><FaPhone /> 011 2 345 458</p>
           <p><FaFacebook /> www.facebook.com</p>
           <p><FaEnvelope /> burgers@gmail.com</p>
-          <p><FaGlobe /><a href="http://yoursite.com">www.burgers.com</a></p>
+          <p><FaGlobe /><a href="http://burgers.com">www.burgers.com</a></p>
         </div>
       </div>
         </section>
@@ -746,13 +747,12 @@ const handleCloseModal = () => {
         ref={mapRef}
         className="contact-map"
       ></div>
-        <Helmet>
-        <script
-          async
-          defer
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdEyxENGQgPhnycD8qtAs0S-Wy6ge0ZiI&callback=initMap"
-        ></script>
-      </Helmet>
+
+      </div>
+      <div className='contactContainer'>
+        <h1>Booking</h1>
+        <section className='booking'>
+        </section>
       </div>
     </div>
   );
