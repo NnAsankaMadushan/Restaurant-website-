@@ -45,6 +45,7 @@
   align-items: center;
   font-size: 20px;
   padding-right: 80px;
+  cursor: pointer;
 }
 
 .navbar-info div {
